@@ -41,6 +41,8 @@ export class TodosComponent implements OnInit {
   }
 
   addTodo () {
+    if (this.inputTodo === '') return
+
     this.todos.push({
       content: this.inputTodo,
       completed:false
